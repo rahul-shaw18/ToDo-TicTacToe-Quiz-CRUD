@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="card">
+    <div class="head">
+      <div class="question-no">
+        {{ currentQuestionIndex + 1 }} of 5 question
+      </div>
+      <span class="question-no"> Correct: {{ rightAnswer }} </span>
+      <span class="question-no"> Incorrect: {{ wrongAnswer }} </span>
+
+      <div class="timer">
+        <i class="fa-regular fa-clock clock"></i>
+        <div class="timing">{{ count }}</div>
+      </div>
+    </div>
+    <div
+      class="progress-bar"
+      [ngClass]="{ 'progress-bar-animate': progress_value }"
+    ></div>
+    <div class="body">
+      <div class="question">
+        {{ questionArray[currentQuestionIndex].question }}
+      </div>
+      <div *ngFor="let option of questionArray[currentQuestionIndex].options">
+        <div class="answer">
+          <div
+            class="options"
+            [ngClass]="{
+              'checked correctAnswer':
+                currentCorrectAnswer == option && incorrect,
+              incorrectAnswer: incorrect && option == currentSelectedAnswer
+            }"
+            (click)="checkAnswer(option)"
+          >
+            {{ option }}
+            <div>
+              <i class="fa-solid fa-circle-check"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button (click)="nextQuestion()">Next Question</button>
+    </div>
+  </div>
+</div>

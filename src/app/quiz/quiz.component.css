@@ -1,0 +1,127 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 92vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #84ffff;
+}
+
+.container .card {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.container .card .head {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 10px;
+}
+
+.container .card .head .question-no {
+  font-size: 15px;
+  font-weight: 500;
+  padding: 10px 5px 5px 5px;
+  margin: 6px 8px;
+}
+
+.container .card .head .timer {
+  margin: 10px;
+  padding: 3px 5px;
+  height: 25px;
+  background-color: #dedede;
+  display: flex;
+  border-radius: 1px;
+}
+
+.container .card .head .timer .clock {
+  margin-right: 3px;
+  font-size: 20px;
+  padding: 3px;
+  color: #808080;
+}
+.container .card .head .timer .timing {
+  padding: 3px;
+  font-weight: bold;
+}
+.container .card .progress-bar {
+  height: 2px;
+  border-radius: 3px;
+  background-color: blue;
+}
+.container .card .progress-bar.progress-bar-animate {
+  animation: progress 5s linear;
+}
+
+@keyframes progress {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+.container .card .body {
+  padding: 0px 10px 10px 10px;
+}
+
+.container .card .body .question {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 10px 15px;
+  padding: 5px;
+  width: 300px;
+}
+
+.container .card .body .answer .fa-circle-check {
+  display: none;
+}
+
+.container .card .body .answer .checked .fa-circle-check {
+  display: block;
+}
+
+.container .card .body .options {
+  border: 1px solid #c5c5c5;
+  padding: 12px;
+  margin: 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  color: #808080;
+  display: flex;
+  justify-content: space-between;
+}
+.container .card .body .options.correctAnswer {
+  border: 1px solid green;
+}
+.container .card .body .options.incorrectAnswer {
+  border: 1px solid red;
+}
+
+.container .card .body .options:hover {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+.container .card .body button {
+  padding: 8px;
+  margin: 3px 15px 15px 15px;
+  background-color: #29b6f6;
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 5px;
+  width: 92%;
+  height: 45px;
+  border-color: transparent;
+  cursor: pointer;
+}
+.container .card .body button:hover {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.6;
+}

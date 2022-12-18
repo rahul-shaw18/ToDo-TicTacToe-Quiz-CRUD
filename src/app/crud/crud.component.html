@@ -1,0 +1,28 @@
+<div class="main-container">
+  <div class="container">
+    <h1>CRUD</h1>
+    <div class="horizontal-line"></div>
+    <div class="display-content" *ngFor="let item of inputValue">
+      <div class="show-data" *ngIf="!item.editMode">
+        <div class="crud-content">{{ item.value }}</div>
+        <button (click)="item.editMode = true">Edit</button>
+      </div>
+      <div class="show-data" *ngIf="item.editMode">
+        <input type="text" value="{{ item.value }}" [(ngModel)]="item.value" />
+        <button *ngIf="item.editMode" (click)="item.editMode = false">
+          Update
+        </button>
+      </div>
+      <button (click)="onDeleteBtnClicked(item)">Delete</button>
+    </div>
+    <div class="add-item">
+      <input
+        type="text"
+        class="addInput"
+        #addInput
+        placeholder="Enter Value....."
+      />
+      <button (click)="onAddInputbtnClick(addInput)">+</button>
+    </div>
+  </div>
+</div>

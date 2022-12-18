@@ -1,0 +1,105 @@
+.mainContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #84ffff;
+  height: 92vh;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.mainContainer .winner {
+  display: block;
+  height: 40px;
+  width: 300px;
+  font-size: 40px;
+  text-align: center;
+  padding: 20px;
+  font-weight: bold;
+}
+
+.container .gameboard {
+  background-color: #fff;
+}
+
+.container .gameboard .row {
+  display: flex;
+}
+.container .gameboard .row div {
+  border: 1px solid black;
+  font-size: 40px;
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .gameboard .row div:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+/* table,
+td {
+  border-collapse: collapse;
+}
+td {
+  border: 2px solid black;
+  text-align: center;
+  font-size: 30px;
+  padding: 30px 40px;
+  width: 40px;
+  height: 60px;
+  cursor: pointer;
+} */
+/* td:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+} */
+.container .gameboard .row .bt {
+  border-top: 0;
+}
+.container .gameboard .row .bb {
+  border-bottom: 0;
+}
+.container .gameboard .row .bl {
+  border-left: 0;
+}
+.container .gameboard .row .br {
+  border-right: 0;
+}
+
+.mainContainer .btns {
+  display: flex;
+  flex-direction: row;
+}
+.mainContainer .btns button {
+  display: flex;
+  justify-content: space-around;
+  padding: 12px;
+  margin: 25px 25px;
+  width: 131px;
+  background-color: #abc9ff;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.mainContainer .btns button:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}

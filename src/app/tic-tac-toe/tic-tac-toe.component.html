@@ -1,0 +1,26 @@
+<div class="mainContainer">
+  <div class="winner">{{ winner }}</div>
+  <div class="container">
+    <div #ttt class="gameboard">
+      <div class="row">
+        <div class="bt bl" id="1" #r1d1 (click)="put(r1d1)"></div>
+        <div class="bt" id="2" #r1d2 (click)="put(r1d2)"></div>
+        <div class="bt br" id="3" #r1d3 (click)="put(r1d3)"></div>
+      </div>
+      <div class="row">
+        <div class="bl" id="4" #r2d1 (click)="put(r2d1)"></div>
+        <div class="" id="5" #r2d2 (click)="put(r2d2)"></div>
+        <div class="br" id="6" #r2d3 (click)="put(r2d3)"></div>
+      </div>
+      <div class="row">
+        <div class="bl bb" id="7" #r3d1 (click)="put(r3d1)"></div>
+        <div class="bb" id="8" #r3d2 (click)="put(r3d2)"></div>
+        <div class="bb br" id="9" #r3d3 (click)="put(r3d3)"></div>
+      </div>
+    </div>
+  </div>
+  <div class="btns">
+    <!-- <button >Start</button> -->
+    <button (click)="reset()">Reset</button>
+  </div>
+</div>

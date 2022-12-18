@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="todo">
+    <div class="head">
+      <div class="date">{{ myDate | date : "shortDate" }}</div>
+      <div class="time">{{ hours + ":" + minutes + " " + newformat }}</div>
+    </div>
+    <div class="horizontal-line"></div>
+    <div class="main-heading">TO-DO List</div>
+    <div class="body" *ngFor="let item of todo">
+      <input type="checkbox" (click)="strikethrough(item.id)" />
+      <div
+        class="added-to-do"
+        [ngClass]="item.isCompleted ? 'strikethrough' : ''"
+      >
+        {{ item.name }}
+      </div>
+      <div class="delete" (click)="removeList(item.id)">
+        <i class="fa-solid fa-circle-xmark delete-icon"></i>
+      </div>
+    </div>
+    <div class="foot">
+      <input type="text" class="text_box" #addTodo placeholder="Add an item" />
+      <button type="button" (click)="addList(addTodo)">+</button>
+    </div>
+  </div>
+</div>

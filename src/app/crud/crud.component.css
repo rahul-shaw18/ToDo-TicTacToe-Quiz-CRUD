@@ -1,0 +1,75 @@
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 93vh;
+  background-color: #84ffff;
+}
+
+.main-container .container {
+  width: 500px;
+  height: auto;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+.main-container .container .horizontal-line {
+  height: 1.5px;
+  width: 515px;
+  margin: 10px 0px 5px 0px;
+
+  background-color: blue;
+}
+.main-container .container .display-content {
+  display: flex;
+  margin: 5px 10px;
+  justify-content: center;
+}
+
+.main-container .container .display-content:hover {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+.main-container .container .display-content .show-data {
+  display: flex;
+  margin: 0px;
+}
+.main-container .container .display-content .show-data .crud-content {
+  width: 346px;
+  height: 28px;
+  font-size: 23px;
+  border: 1px solid black;
+  padding: 0px 7px 0px 7px;
+}
+
+.main-container .container .display-content .show-data input {
+  font-size: 23px;
+  width: 344px;
+  padding: 0px 7px 0px 7px;
+}
+
+.main-container .container .add-item {
+  display: flex;
+  justify-content: center;
+  margin: 18px 12px 18px 12px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.main-container .container .add-item input {
+  font-size: 20px;
+  padding: 0px 7px 0px 7px;
+  width: 405px;
+  border: 1px solid black;
+}
+
+button {
+  width: 60px;
+  height: 30px;
+  padding: 2px;
+  background-color: #84ffff;
+  border: 0.5px solid black;
+}
